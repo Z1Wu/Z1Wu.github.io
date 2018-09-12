@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Service compuing on Even</title>
-    <link>http://localhost:1313/categories/service-compuing/</link>
-    <description>Recent content in Service compuing on Even</description>
+    <title>Service compuing on z1wu&#39;s blog</title>
+    <link>http://z1wu.github.io/categories/service-compuing/</link>
+    <description>Recent content in Service compuing on z1wu&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 12 Sep 2018 09:43:18 +0800</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/categories/service-compuing/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://z1wu.github.io/categories/service-compuing/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Test</title>
-      <link>http://localhost:1313/post/test/</link>
+      <link>http://z1wu.github.io/post/test/</link>
       <pubDate>Wed, 12 Sep 2018 09:43:18 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/test/</guid>
+      <guid>http://z1wu.github.io/post/test/</guid>
       <description>test for service computing</description>
     </item>
     
