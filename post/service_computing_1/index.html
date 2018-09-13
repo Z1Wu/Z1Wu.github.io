@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>服务计算第一次报告 - z1wu&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="z1wu" />
+  <meta name="description" content="任务概述 搭建自己使用的私有桌面云 初步了解虚拟化技术，理解云计算的相关概念 为后续课程提供统一的编程与实验环境 理解系统工程师面临的困境 实验流程 本" />
+
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.48" />
+
+
+<link rel="canonical" href="http://z1wu.github.io/post/service_computing_1/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="服务计算第一次报告" />
+<meta property="og:description" content="任务概述 搭建自己使用的私有桌面云 初步了解虚拟化技术，理解云计算的相关概念 为后续课程提供统一的编程与实验环境 理解系统工程师面临的困境 实验流程 本" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://z1wu.github.io/post/service_computing_1/" /><meta property="article:published_time" content="2018-09-13T12:18:35&#43;08:00"/>
+<meta property="article:modified_time" content="2018-09-13T12:18:35&#43;08:00"/>
+<meta itemprop="name" content="服务计算第一次报告">
+<meta itemprop="description" content="任务概述 搭建自己使用的私有桌面云 初步了解虚拟化技术，理解云计算的相关概念 为后续课程提供统一的编程与实验环境 理解系统工程师面临的困境 实验流程 本">
+
+
+<meta itemprop="datePublished" content="2018-09-13T12:18:35&#43;08:00" />
+<meta itemprop="dateModified" content="2018-09-13T12:18:35&#43;08:00" />
+<meta itemprop="wordCount" content="1741">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="服务计算第一次报告"/>
+<meta name="twitter:description" content="任务概述 搭建自己使用的私有桌面云 初步了解虚拟化技术，理解云计算的相关概念 为后续课程提供统一的编程与实验环境 理解系统工程师面临的困境 实验流程 本"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">z1wu&#39;s blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">z1wu&#39;s blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">服务计算第一次报告</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2018-09-13 </span>
+        
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#任务概述">任务概述</a></li>
+<li><a href="#实验流程">实验流程</a>
+<ul>
+<li><a href="#安装虚拟机软件">安装虚拟机软件</a>
+<ul>
+<li><a href="#下载virtual-box安装包">下载virtual box安装包</a></li>
+<li><a href="#在电脑上安装virtual-box">在电脑上安装virtual box</a></li>
+</ul></li>
+<li><a href="#配置virtual-box">配置virtual box</a>
+<ul>
+<li><a href="#optional-打开处理器虚拟化">(optional)打开处理器虚拟化</a></li>
+<li><a href="#配置默认的虚拟安装位置">配置默认的虚拟安装位置</a></li>
+<li><a href="#配置虚拟机内部虚拟网络">配置虚拟机内部虚拟网络</a></li>
+<li><a href="#检验配置的网络">检验配置的网络</a></li>
+</ul></li>
+<li><a href="#安装虚拟机">安装虚拟机</a>
+<ul>
+<li><a href="#虚拟机镜像选择">虚拟机镜像选择</a></li>
+<li><a href="#创建虚拟机">创建虚拟机</a></li>
+<li><a href="#安装虚拟机-1">安装虚拟机</a></li>
+<li><a href="#配置虚拟机">配置虚拟机</a></li>
+<li><a href="#虚拟机上安装软件">虚拟机上安装软件</a></li>
+<li><a href="#设置远程连接">设置远程连接</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      
+
+<h1 id="任务概述">任务概述</h1>
+
+<p>搭建自己使用的私有桌面云</p>
+
+<ul>
+<li>初步了解虚拟化技术，理解云计算的相关概念</li>
+<li>为后续课程提供统一的编程与实验环境</li>
+<li>理解系统工程师面临的困境</li>
+</ul>
+
+<h1 id="实验流程">实验流程</h1>
+
+<p>本次的实验报告主要是来记录相关的本次任务中比较重要也比较麻烦的一个部分: 使用虚拟机平台搭建自己的私有云。</p>
+
+<h2 id="安装虚拟机软件">安装虚拟机软件</h2>
+
+<p>要搭建一个私有的云桌面，首先需要选择一个虚拟机创建平台，在目前有主要有两个选择(超链接是对应的下载连接):
+- vmware player(免费版) / vmware workstation(专业版需要付费)  []
+- oracle virtual box (开源软件) []<br />
+使用上述两个平台都可以完成本次实验，处于演示目的，本文将会使用 <code>virutal box</code> 作为虚拟机平台。</p>
+
+<p>以下是安装虚拟机的过程</p>
+
+<h3 id="下载virtual-box安装包">下载virtual box安装包</h3>
+
+<p>在官网根据自己的计算机的相应情况，下载对应的安装器，本人是使用win10, 所以下面的教程都在winows环境下进行
+<img src="/images/1.png" alt="download from the offical website" /></p>
+
+<h3 id="在电脑上安装virtual-box">在电脑上安装virtual box</h3>
+
+<p>按照上一步下载得到的是一个exe，直接点开之后一直下一步就行，安装完按照提示重新启动一下</p>
+
+<h2 id="配置virtual-box">配置virtual box</h2>
+
+<h3 id="optional-打开处理器虚拟化">(optional)打开处理器虚拟化</h3>
+
+<p>如果是第一次使用虚拟机软件，可能会需要打开处理器的虚拟化功能，一种打开处理器虚拟化功能的方法通过在blos界面(可通过重新开机进入)打开，
+详细的操作流程可以通过百度</p>
+
+<h3 id="配置默认的虚拟安装位置">配置默认的虚拟安装位置</h3>
+
+<p>在未设置的情况下，virtual box的默认安装位置都会是在vritual box安装目录下的文件中，由于处于速度考虑大部分人可能会把virtual box安装在SSD上，而这个可能是系统盘，按照默认的设置，在创建虚拟机的时候可能会占用系统盘太多空间。所以可以把安装位置改一下。
+<img src="/images/test_gif.gif" alt="" /></p>
+
+<h3 id="配置虚拟机内部虚拟网络">配置虚拟机内部虚拟网络</h3>
+
+<p>// 以下描述都是从网上的操作步骤是网上的教程的内容，本人对其中原理不是很懂
+在安装虚拟机之前我们要先置好虚拟机的网卡，可以用来实现虚拟机与虚拟机之间和以及虚拟机和主机之间的连接。
+配置的具体流程如下</p>
+
+<ol>
+<li>管理-》主机网络管理器-》创建虚拟网卡 (可以看到现在里面有两张网卡)</li>
+<li>修改虚拟网卡的地址，给这个新建的的网卡一个地址: 192.168.100.<sup>1</sup>&frasl;<sub>24</sub></li>
+<li>最后在DHCP一栏点击启用</li>
+</ol>
+
+<p><img src="/images/network_setting.png" alt="" /></p>
+
+<h3 id="检验配置的网络">检验配置的网络</h3>
+
+<p>在windows的终端(cmd, powershell 都可以)，输入ipconfig就可以看到这个网卡
+<img src="/images/network_validation.png" alt="" /></p>
+
+<h2 id="安装虚拟机">安装虚拟机</h2>
+
+<h3 id="虚拟机镜像选择">虚拟机镜像选择</h3>
+
+<p>根据课程要求，需要64bit的linux系统，在各种发行版中都要挺多可以选择的</p>
+
+<ul>
+<li><p>centos: 如果是选择centos，如果你不需要桌面，选择minimal版本即可，如果需要桌面，则下载完整版的</p></li>
+
+<li><p>ubuntu: 下载服务器版，</p></li>
+</ul>
+
+<p>处于国内特殊环境的考虑，直接从官网上下载的速度，不是理想，可以改用从阿里云的源上下载<a href="https://opsx.alibaba.com/mirror">OSX</a></p>
+
+<h3 id="创建虚拟机">创建虚拟机</h3>
+
+<p>点击新建虚拟机
+按照流程配置虚拟机的相关参数。在创建的时候只有内存和硬盘大小，在创建之后，就可以修改其他设置</p>
+
+<p><img src="/images/create_vm_2.png" alt="" />
+- CPU设置: 建议 1 -&gt; 2
+- 内存设置: 不低于2g
+- 存储: 以后难以拓展，预先分配30g
+- 网络:
+    - 第一块网卡需要设置为NAT
+    - 第二块网卡设计host noly, 也就是在上一步设置的网卡
+- 显示：如果有设置显卡的话，建议设置较高的显存</p>
+
+<p>按照上述的步骤和要求设置完相关的配置之后，虚拟机的配置大致如下
+<img src="/images/create_vm_final.png" alt="" /></p>
+
+<h3 id="安装虚拟机-1">安装虚拟机</h3>
+
+<ol>
+<li>双击左边栏的刚刚创建的虚拟机，就可以进行虚拟机的安装</li>
+<li>安装开始之前会出现提示，要求选择启动盘，实际上就是选择刚才下载的镜像，
+<img src="/images/install_vm1.png" alt="install" /></li>
+<li>选择语言(有条件可以选择英语，否则之后建立的文件都是中文命名，难以操作)
+<img src="/images/install_vm2.png" alt="install" /></li>
+<li>之后就是建立用户，设置root密码，等待安装结束
+<img src="/images/install_vm3.png" alt="install" /></li>
+</ol>
+
+<h3 id="配置虚拟机">配置虚拟机</h3>
+
+<ol>
+<li>使用centos的包管理器yum，获取wget
+
+<ul>
+<li>yum: 类似与ubuntu下的apt，用于获取软件和以及安装软件(包括依赖处理等)和软件管理的包管理器</li>
+<li>wget: web get，支持http和ftp协议从web上获取内容。</li>
+</ul></li>
+<li>配置yum的包源: yum远程下载包的默认源是在国外速度不如在国内(&hellip;),所以把包的源改成国内的，比如<a href="https://opsx.alibaba.com/mirror">aliyun</a>或者<a href="http://mirrors.163.com/.help/centos.html">163</a>)的源
+
+<ul>
+<li>在aliyun或者163的网站上都有修改的详细教程.</li>
+</ul></li>
+<li>使用yum update 升级os内核( 需要下载之后再安装，需要消耗一定时间，而且安装需要重新启动)</li>
+<li>重启之后配置网络相关的内容
+
+<ul>
+<li>使用nmtui，配置相关的网络设置，包括主机名和第二块网卡地址()</li>
+</ul></li>
+<li>通过ping，来验证网络设置是否正确
+
+<ul>
+<li>在虚拟机内ping &lt;主机的ip地址&gt;
+<!-- - ![]() --></li>
+<li>在主机上ping &lt;虚拟机的ip地址&gt;
+<!-- - ![]() --></li>
+</ul></li>
+</ol>
+
+<h3 id="虚拟机上安装软件">虚拟机上安装软件</h3>
+
+<h3 id="设置远程连接">设置远程连接</h3>
+
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">z1wu</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">2018-09-13</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      
+
+      
+      <nav class="post-nav">
+        
+        
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+  <a href="http://z1wu.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">z1wu</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
