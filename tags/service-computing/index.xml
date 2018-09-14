@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Service computing on z1wu&#39;s blog</title>
+    <title>Service-Computing on z1wu&#39;s blog</title>
     <link>http://z1wu.github.io/tags/service-computing/</link>
-    <description>Recent content in Service computing on z1wu&#39;s blog</description>
+    <description>Recent content in Service-Computing on z1wu&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 12 Sep 2018 09:43:18 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 13 Sep 2018 12:18:35 +0800</lastBuildDate>
     
 	<atom:link href="http://z1wu.github.io/tags/service-computing/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Test</title>
-      <link>http://z1wu.github.io/post/test/</link>
-      <pubDate>Wed, 12 Sep 2018 09:43:18 +0800</pubDate>
+      <title>Service-Computing-01</title>
+      <link>http://z1wu.github.io/post/service_computing_1/</link>
+      <pubDate>Thu, 13 Sep 2018 12:18:35 +0800</pubDate>
       
-      <guid>http://z1wu.github.io/post/test/</guid>
-      <description>test for service computing</description>
+      <guid>http://z1wu.github.io/post/service_computing_1/</guid>
+      <description>任务概述 搭建自己使用的私有桌面云 初步了解虚拟化技术，理解云计算的相关概念 为后续课程提供统一的编程与实验环境 理解系统工程师面临的困境 实验流程 本</description>
     </item>
     
   </channel>

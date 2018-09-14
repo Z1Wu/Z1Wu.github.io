@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>服务计算第一次报告 - z1wu&#39;s blog</title>
+  <title>Service-Computing-01 - z1wu&#39;s blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -48,24 +48,24 @@
 
 
 
-<meta property="og:title" content="服务计算第一次报告" />
+<meta property="og:title" content="Service-Computing-01" />
 <meta property="og:description" content="任务概述 搭建自己使用的私有桌面云 初步了解虚拟化技术，理解云计算的相关概念 为后续课程提供统一的编程与实验环境 理解系统工程师面临的困境 实验流程 本" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://z1wu.github.io/post/service_computing_1/" /><meta property="article:published_time" content="2018-09-13T12:18:35&#43;08:00"/>
 <meta property="article:modified_time" content="2018-09-13T12:18:35&#43;08:00"/>
-<meta itemprop="name" content="服务计算第一次报告">
+<meta itemprop="name" content="Service-Computing-01">
 <meta itemprop="description" content="任务概述 搭建自己使用的私有桌面云 初步了解虚拟化技术，理解云计算的相关概念 为后续课程提供统一的编程与实验环境 理解系统工程师面临的困境 实验流程 本">
 
 
 <meta itemprop="datePublished" content="2018-09-13T12:18:35&#43;08:00" />
 <meta itemprop="dateModified" content="2018-09-13T12:18:35&#43;08:00" />
-<meta itemprop="wordCount" content="1741">
+<meta itemprop="wordCount" content="2685">
 
 
 
-<meta itemprop="keywords" content="" />
+<meta itemprop="keywords" content="Service-Computing,Private Cloud," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="服务计算第一次报告"/>
+<meta name="twitter:title" content="Service-Computing-01"/>
 <meta name="twitter:description" content="任务概述 搭建自己使用的私有桌面云 初步了解虚拟化技术，理解云计算的相关概念 为后续课程提供统一的编程与实验环境 理解系统工程师面临的困境 实验流程 本"/>
 
 <!--[if lte IE 9]>
@@ -133,11 +133,15 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">服务计算第一次报告</h1>
+      <h1 class="post-title">Service-Computing-01</h1>
 
       <div class="post-meta">
         <span class="post-time"> 2018-09-13 </span>
-        
+        <div class="post-category">
+            
+              <a href="/categories/service-computing/"> Service-Computing </a>
+            
+          </div>
         
         
       </div>
@@ -173,7 +177,9 @@
 <li><a href="#安装虚拟机-1">安装虚拟机</a></li>
 <li><a href="#配置虚拟机">配置虚拟机</a></li>
 <li><a href="#虚拟机上安装软件">虚拟机上安装软件</a></li>
-<li><a href="#设置远程连接">设置远程连接</a></li>
+<li><a href="#建立私有云">建立私有云</a></li>
+<li><a href="#使用ssh连接">使用ssh连接</a></li>
+<li><a href="#使用远程桌面服务">使用远程桌面服务</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -301,7 +307,7 @@
 
 <ul>
 <li>yum: 类似与ubuntu下的apt，用于获取软件和以及安装软件(包括依赖处理等)和软件管理的包管理器</li>
-<li>wget: web get，支持http和ftp协议从web上获取内容。</li>
+<li>wget: web get，支持http和ftp协议从web上获取内容。(需要使用这个用于下一步软件源的更改)</li>
 </ul></li>
 <li>配置yum的包源: yum远程下载包的默认源是在国外速度不如在国内(&hellip;),所以把包的源改成国内的，比如<a href="https://opsx.alibaba.com/mirror">aliyun</a>或者<a href="http://mirrors.163.com/.help/centos.html">163</a>)的源
 
@@ -317,16 +323,86 @@
 <li>通过ping，来验证网络设置是否正确
 
 <ul>
-<li>在虚拟机内ping &lt;主机的ip地址&gt;
-<!-- - ![]() --></li>
-<li>在主机上ping &lt;虚拟机的ip地址&gt;
-<!-- - ![]() --></li>
+<li>在虚拟机内ping &lt;主机的ip地址&gt;</li>
+<li>在主机上ping &lt;虚拟机的ip地址&gt;</li>
 </ul></li>
 </ol>
 
 <h3 id="虚拟机上安装软件">虚拟机上安装软件</h3>
 
-<h3 id="设置远程连接">设置远程连接</h3>
+<p>在虚拟机上安装可以使用yum install <package_name> 直接从之前设置的源下载相应的软件
+tips: 如果不知道相应的包的名字则可以使用 <code>yum whatprovides &lt;keyword&gt;</code> 查看了包含输入关键词的包</p>
+
+<h3 id="建立私有云">建立私有云</h3>
+
+<p>当上述的基本设置都完成之后就可以设立一个私有云，既然是云，一般都有多台虚拟机。
+经过上面的步骤建立了之后，我们可以通过VirtualBox提供的虚拟机复制来创建多台和上面配置好的虚拟机相同的虚拟机
+需要注意的是，再复制的时候需要选择重新初始化网卡的mac.
+VirtualBox有两种复制方式链接复制和完全复制，根据VB(VirualBox)文档的描述</p>
+
+<blockquote>
+<p>完全复制(Full clone)：</p>
+
+<p>由原始虚拟机完全复制到新的虚拟机, 需要完整足够的硬盘空间, 新的虚拟机可以在没有原始虚拟机的状况下独立运行。</p>
+
+<p>链接复制(Linked clone)：</p>
+
+<p>是以原始虚拟机为基础, 快速复制成新的虚拟机, 但较完全复制节省空间, 只是新的虚拟机运行时需要原始虚拟机存在.
+在这里使用连接复制即可</p>
+</blockquote>
+
+<h3 id="使用ssh连接">使用ssh连接</h3>
+
+<p>在上一步ping通之后就可以使用在宿主机(host)上连接。
+在windows上，如果安装了git, 在携带的git bash中已经提供了ssh工具用于连接。
+直接<code>ssh username@ip_address</code>
+然后输入密码就可以连接。</p>
+
+<h3 id="使用远程桌面服务">使用远程桌面服务</h3>
+
+<p>windows 用户可以使用 rdp(remote desktop protocol)提供远程桌面服务
+1. 首先需要为VB安装相应拓展包</p>
+
+<ol>
+<li>为centos安装桌面( 由于上面提到使用的minial的iso, 所以需要手动安装桌面组件)</li>
+</ol>
+
+<pre><code class="language-shell">## 安装桌面环境
+yum groupinstall &quot;GNOME Desktop&quot;
+
+## 设置图形化组件为启动目标
+ln -sf /lib/systemd/system/runlevel5.target /etc/systemd/system/default.target
+
+## 重新启动就可以看到效果
+shutdown -r now
+</code></pre>
+
+<ol>
+<li>之后由于虚拟机使用的是centos，需要下载Xrdp，以及配置相关的文件，来使用远程桌面服务。</li>
+</ol>
+
+<pre><code class="language-shell"># 以下内容来自 https://siskonemilia.github.io/Service-Computing/Service-Computing-01-Private-Cloud-Service/
+# 由于yum的包仓库没有Xrdp的包, 需要配置EPEL源，
+yum install -y epel-release-latest.noarch
+# 安装Xrdp相关组件
+yum install xrdp tigervnc-server 
+# 启动xrdp 服务，并设置开机启动，实际上是监听(listen)相应端口的rdp连接
+systemctl start xrdp
+systemctl enable xrdp
+# 使用netstat查看端口的使用情况, 验证是否开启成功, 默认是使用3389来监听
+netstat -antup | grep xrdp
+# 调整防火墙设置
+firewall-cmd --permanent --add-port=3389/tcp
+firewall-cmd --reload
+chcon --type=bin_t /usr/sbin/xrdp
+chcon --type=bin_t /usr/sbin/xrdp-sesman
+</code></pre>
+
+<ol>
+<li>之后就可以使用windows自带的rdc(remote desktop connection)，连接远程桌面
+输入对应的虚拟机地址和端口号，以及用于登陆的用户名( centos 的用户)，即可完成连接
+<img src="/images/rdc_win.png" alt="" /></li>
+</ol>
 
     </div>
 
@@ -348,7 +424,13 @@
     
 
     <footer class="post-footer">
-      
+      <div class="post-tags">
+          
+          <a href="/tags/service-computing/">Service-Computing</a>
+          
+          <a href="/tags/private-cloud/">Private Cloud</a>
+          
+        </div>
 
       
       <nav class="post-nav">
