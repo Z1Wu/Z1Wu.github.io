@@ -6,10 +6,19 @@
     <description>Recent content in Tags on z1wu&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 13 Sep 2018 12:18:35 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 27 Sep 2018 15:38:41 +0800</lastBuildDate>
     
 	<atom:link href="http://z1wu.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Golang</title>
+      <link>http://z1wu.github.io/tags/golang/</link>
+      <pubDate>Thu, 27 Sep 2018 15:38:41 +0800</pubDate>
+      
+      <guid>http://z1wu.github.io/tags/golang/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Private Cloud</title>
@@ -23,7 +32,7 @@
     <item>
       <title>Service-Computing</title>
       <link>http://z1wu.github.io/tags/service-computing/</link>
-      <pubDate>Thu, 13 Sep 2018 12:18:35 +0800</pubDate>
+      <pubDate>Thu, 27 Sep 2018 15:38:41 +0800</pubDate>
       
       <guid>http://z1wu.github.io/tags/service-computing/</guid>
       <description></description>

@@ -6,10 +6,19 @@
     <description>Recent content in Service-Computing on z1wu&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 13 Sep 2018 12:18:35 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 27 Sep 2018 15:38:41 +0800</lastBuildDate>
     
 	<atom:link href="http://z1wu.github.io/tags/service-computing/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Service-Computing-02</title>
+      <link>http://z1wu.github.io/post/service_computing_2/</link>
+      <pubDate>Thu, 27 Sep 2018 15:38:41 +0800</pubDate>
+      
+      <guid>http://z1wu.github.io/post/service_computing_2/</guid>
+      <description>概述 这次的实验是在虚拟机上搭建golang编程环境 1.Golang 初探 首先我们需要了解一下go 语言是什么 既然选择后台开发，自然建议你在 Linux 环境下安装 go 语言开</description>
+    </item>
     
     <item>
       <title>Service-Computing-01</title>

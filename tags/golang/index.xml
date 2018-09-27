@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on z1wu&#39;s blog</title>
-    <link>http://z1wu.github.io/post/</link>
-    <description>Recent content in Posts on z1wu&#39;s blog</description>
+    <title>Golang on z1wu&#39;s blog</title>
+    <link>http://z1wu.github.io/tags/golang/</link>
+    <description>Recent content in Golang on z1wu&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 27 Sep 2018 15:38:41 +0800</lastBuildDate>
     
-	<atom:link href="http://z1wu.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://z1wu.github.io/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,15 +18,6 @@
       
       <guid>http://z1wu.github.io/post/service_computing_2/</guid>
       <description>概述 这次的实验是在虚拟机上搭建golang编程环境 1.Golang 初探 首先我们需要了解一下go 语言是什么 既然选择后台开发，自然建议你在 Linux 环境下安装 go 语言开</description>
-    </item>
-    
-    <item>
-      <title>Service-Computing-01</title>
-      <link>http://z1wu.github.io/post/service_computing_1/</link>
-      <pubDate>Thu, 13 Sep 2018 12:18:35 +0800</pubDate>
-      
-      <guid>http://z1wu.github.io/post/service_computing_1/</guid>
-      <description>任务概述 搭建自己使用的私有桌面云 初步了解虚拟化技术，理解云计算的相关概念 为后续课程提供统一的编程与实验环境 理解系统工程师面临的困境 实验流程 本</description>
     </item>
     
   </channel>
