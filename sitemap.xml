@@ -10,6 +10,13 @@
   </url>
   
   <url>
+    <loc>http://z1wu.github.io/post/service_computing_3/</loc>
+    <lastmod>2018-10-04T18:52:33+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://z1wu.github.io/post/service_computing_2/</loc>
     <lastmod>2018-09-27T15:38:41+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -24,6 +31,13 @@
   </url>
   
   <url>
+    <loc>http://z1wu.github.io/tags/bufio/</loc>
+    <lastmod>2018-10-04T18:52:33+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://z1wu.github.io/categories/</loc>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
@@ -31,14 +45,21 @@
   
   <url>
     <loc>http://z1wu.github.io/tags/golang/</loc>
-    <lastmod>2018-09-27T15:38:41+08:00</lastmod>
+    <lastmod>2018-10-04T18:52:33+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://z1wu.github.io/tags/pflag/</loc>
+    <lastmod>2018-10-04T18:52:33+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://z1wu.github.io/post/</loc>
-    <lastmod>2018-09-27T15:38:41+08:00</lastmod>
+    <lastmod>2018-10-04T18:52:33+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -52,21 +73,21 @@
   
   <url>
     <loc>http://z1wu.github.io/tags/service-computing/</loc>
-    <lastmod>2018-09-27T15:38:41+08:00</lastmod>
+    <lastmod>2018-10-04T18:52:33+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://z1wu.github.io/categories/service-computing/</loc>
-    <lastmod>2018-09-27T15:38:41+08:00</lastmod>
+    <lastmod>2018-10-04T18:52:33+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://z1wu.github.io/tags/</loc>
-    <lastmod>2018-09-27T15:38:41+08:00</lastmod>
+    <lastmod>2018-10-04T18:52:33+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>

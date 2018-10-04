@@ -6,10 +6,19 @@
     <description>Recent content in Service-Computing on z1wu&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 27 Sep 2018 15:38:41 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 04 Oct 2018 18:52:33 +0800</lastBuildDate>
     
 	<atom:link href="http://z1wu.github.io/tags/service-computing/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Service-Computing-03</title>
+      <link>http://z1wu.github.io/post/service_computing_3/</link>
+      <pubDate>Thu, 04 Oct 2018 18:52:33 +0800</pubDate>
+      
+      <guid>http://z1wu.github.io/post/service_computing_3/</guid>
+      <description>概述 这一次的实验是关于实现一个简单的命令行工具slepg, 关于这个工具的详细功能, 可以在这个网页中详细了解 由于本次实验的具体流程在上面的网站</description>
+    </item>
     
     <item>
       <title>Service-Computing-02</title>
