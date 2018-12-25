@@ -10,6 +10,13 @@
   </url>
   
   <url>
+    <loc>http://z1wu.github.io/post/service_computing_6/</loc>
+    <lastmod>2018-12-20T12:58:43+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://z1wu.github.io/post/service_computing_3/</loc>
     <lastmod>2018-10-04T18:52:33+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -31,14 +38,14 @@
   </url>
   
   <url>
-    <loc>http://z1wu.github.io/tags/bufio/</loc>
-    <lastmod>2018-10-04T18:52:33+08:00</lastmod>
+    <loc>http://z1wu.github.io/categories/</loc>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://z1wu.github.io/categories/</loc>
+    <loc>http://z1wu.github.io/tags/docker/</loc>
+    <lastmod>2018-12-20T12:58:43+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -51,15 +58,8 @@
   </url>
   
   <url>
-    <loc>http://z1wu.github.io/tags/pflag/</loc>
-    <lastmod>2018-10-04T18:52:33+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://z1wu.github.io/post/</loc>
-    <lastmod>2018-10-04T18:52:33+08:00</lastmod>
+    <lastmod>2018-12-20T12:58:43+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -72,13 +72,6 @@
   </url>
   
   <url>
-    <loc>http://z1wu.github.io/tags/service-computing/</loc>
-    <lastmod>2018-10-04T18:52:33+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://z1wu.github.io/categories/service-computing/</loc>
     <lastmod>2018-10-04T18:52:33+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -86,7 +79,28 @@
   </url>
   
   <url>
+    <loc>http://z1wu.github.io/tags/service-computing/</loc>
+    <lastmod>2018-12-20T12:58:43+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://z1wu.github.io/tags/</loc>
+    <lastmod>2018-12-20T12:58:43+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://z1wu.github.io/tags/bufio/</loc>
+    <lastmod>2018-10-04T18:52:33+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://z1wu.github.io/tags/pflag/</loc>
     <lastmod>2018-10-04T18:52:33+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
