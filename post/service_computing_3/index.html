@@ -59,7 +59,7 @@
 
 <meta itemprop="datePublished" content="2018-10-04T18:52:33&#43;08:00" />
 <meta itemprop="dateModified" content="2018-10-04T18:52:33&#43;08:00" />
-<meta itemprop="wordCount" content="1568">
+<meta itemprop="wordCount" content="1596">
 
 
 
@@ -142,7 +142,7 @@
               <a href="/categories/service-computing/"> Service-Computing </a>
             
           </div>
-        <span class="more-meta"> 1568 words </span>
+        <span class="more-meta"> 1596 words </span>
         <span class="more-meta"> 4 mins read </span>
         
       </div>
@@ -181,7 +181,6 @@
 <li><a href="#测试前的准备-测试集">测试前的准备(测试集)</a></li>
 <li><a href="#测试过程">测试过程</a></li>
 </ul></li>
-<li><a href="#y">y</a></li>
 </ul>
 </nav>
   </div>
@@ -360,8 +359,13 @@ page, ferr := rd.ReadString('\f')
 
 <h2 id="测试过程">测试过程</h2>
 
+<p>使用上一步生成的测试文件</p>
+
 <ul>
-<li>测试第二种读取方式:</li>
+<li>测试第二种读取方式:
+<code>shell
+./selpg -s 1 -e 10 -f &lt;test_file&gt;
+</code></li>
 </ul>
 
 
@@ -373,7 +377,10 @@ page, ferr := rd.ReadString('\f')
 </figure>
 
 
-<h1 id="y">y</h1>
+<ul>
+<li>测试重定向
+由于这个</li>
+</ul>
 
     </div>
 
@@ -410,6 +417,11 @@ page, ferr := rd.ReadString('\f')
       
       <nav class="post-nav">
         
+          <a class="prev" href="/post/service_computing_5/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Service-Computing-05</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
         
           <a class="next" href="/post/service_computing_2/">
             <span class="next-text nav-default">Service-Computing-02</span>
@@ -448,7 +460,9 @@ page, ferr := rd.ReadString('\f')
 
   <span class="copyright-year">
     &copy; 
-    2018
+    
+      2018 - 
+    2019
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

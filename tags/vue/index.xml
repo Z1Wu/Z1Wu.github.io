@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vue on z1wu&#39;s blog</title>
+    <link>http://z1wu.github.io/tags/vue/</link>
+    <description>Recent content in Vue on z1wu&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 17 Dec 2018 00:00:30 +0800</lastBuildDate>
+    
+	<atom:link href="http://z1wu.github.io/tags/vue/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Service-Computing-05</title>
+      <link>http://z1wu.github.io/post/service_computing_5/</link>
+      <pubDate>Mon, 17 Dec 2018 00:00:30 +0800</pubDate>
+      
+      <guid>http://z1wu.github.io/post/service_computing_5/</guid>
+      <description>ServiceComputing 作业&amp;ndash;前后端分离的web应用 源代码地址 github: here 负责工作 这一次实验负责前端部分的开发，采用的现学的vue中的基本功能来实现对 swapi 网站的</description>
+    </item>
+    
+  </channel>
+</rss>

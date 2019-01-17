@@ -6,10 +6,28 @@
     <description>Recent content in Service-Computing on z1wu&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 04 Oct 2018 18:52:33 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 20 Dec 2018 12:58:43 +0800</lastBuildDate>
     
 	<atom:link href="http://z1wu.github.io/tags/service-computing/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Service-Computing-06</title>
+      <link>http://z1wu.github.io/post/service_computing_6/</link>
+      <pubDate>Thu, 20 Dec 2018 12:58:43 +0800</pubDate>
+      
+      <guid>http://z1wu.github.io/post/service_computing_6/</guid>
+      <description>ServiceComputing homework&amp;ndash;Docker初探 本文主要关注如何在 window10 专业版下安装 dockers，和相关的配置以及简单的使用。 安装 从官网下载 docker</description>
+    </item>
+    
+    <item>
+      <title>Service-Computing-05</title>
+      <link>http://z1wu.github.io/post/service_computing_5/</link>
+      <pubDate>Mon, 17 Dec 2018 00:00:30 +0800</pubDate>
+      
+      <guid>http://z1wu.github.io/post/service_computing_5/</guid>
+      <description>ServiceComputing 作业&amp;ndash;前后端分离的web应用 源代码地址 github: here 负责工作 这一次实验负责前端部分的开发，采用的现学的vue中的基本功能来实现对 swapi 网站的</description>
+    </item>
     
     <item>
       <title>Service-Computing-03</title>
