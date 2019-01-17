@@ -16,17 +16,20 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="z1wu" /><meta name="description" content="任务概述 搭建自己使用的私有桌面云 初步了解虚拟化技术，理解云计算的相关概念 为后续课程提供统一的编程与实验环境 理解系统工程师面临的困境 实验流程 本" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="z1wu" />
+  <meta name="description" content="任务概述 搭建自己使用的私有桌面云 初步了解虚拟化技术，理解云计算的相关概念 为后续课程提供统一的编程与实验环境 理解系统工程师面临的困境 实验流程 本" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.53 with even 4.0.0" />
+
+<meta name="generator" content="Hugo 0.48" />
 
 
 <link rel="canonical" href="http://z1wu.github.io/post/service_computing_1/" />
+
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -34,8 +37,15 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.93844dae.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
 
 
 <meta property="og:title" content="Service-Computing-01" />
@@ -43,14 +53,13 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://z1wu.github.io/post/service_computing_1/" /><meta property="article:published_time" content="2018-09-13T12:18:35&#43;08:00"/>
 <meta property="article:modified_time" content="2018-09-13T12:18:35&#43;08:00"/>
-
 <meta itemprop="name" content="Service-Computing-01">
 <meta itemprop="description" content="任务概述 搭建自己使用的私有桌面云 初步了解虚拟化技术，理解云计算的相关概念 为后续课程提供统一的编程与实验环境 理解系统工程师面临的困境 实验流程 本">
 
 
 <meta itemprop="datePublished" content="2018-09-13T12:18:35&#43;08:00" />
 <meta itemprop="dateModified" content="2018-09-13T12:18:35&#43;08:00" />
-<meta itemprop="wordCount" content="2708">
+<meta itemprop="wordCount" content="2685">
 
 
 
@@ -72,7 +81,7 @@
 <body>
   <div id="mobile-navbar" class="mobile-navbar">
   <div class="mobile-header-logo">
-    <a href="/" class="logo">Even</a>
+    <a href="/" class="logo">z1wu&#39;s blog</a>
   </div>
   <div class="mobile-navbar-icon">
     <span></span>
@@ -98,7 +107,7 @@
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
-  <a href="/" class="logo">Even</a>
+  <a href="/" class="logo">z1wu&#39;s blog</a>
 </div>
 
 <nav class="site-navbar">
@@ -129,14 +138,21 @@
       <div class="post-meta">
         <span class="post-time"> 2018-09-13 </span>
         <div class="post-category">
-            <a href="/categories/service-computing/"> Service-Computing </a>
-            </div>
+            
+              <a href="/categories/service-computing/"> Service-Computing </a>
+            
+          </div>
+        <span class="more-meta"> 2685 words </span>
+        <span class="more-meta"> 6 mins read </span>
         
       </div>
     </header>
 
-    <div class="post-toc" id="post-toc">
+    
+    
+<div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
+  
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
 <ul>
@@ -171,6 +187,11 @@
 </nav>
   </div>
 </div>
+
+    
+    
+
+    
     <div class="post-content">
       
 
@@ -346,67 +367,38 @@ VirtualBox有两种复制方式链接复制和完全复制，根据VB(VirualBox)
 <ol>
 <li>为centos安装桌面( 由于上面提到使用的minial的iso, 所以需要手动安装桌面组件)</li>
 </ol>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1">## 安装桌面环境</span>
-yum groupinstall <span class="s2">&#34;GNOME Desktop&#34;</span>
 
-<span class="c1">## 设置图形化组件为启动目标</span>
+<pre><code class="language-shell">## 安装桌面环境
+yum groupinstall &quot;GNOME Desktop&quot;
+
+## 设置图形化组件为启动目标
 ln -sf /lib/systemd/system/runlevel5.target /etc/systemd/system/default.target
 
-<span class="c1">## 重新启动就可以看到效果</span>
-shutdown -r now</code></pre></td></tr></table>
-</div>
-</div>
+## 重新启动就可以看到效果
+shutdown -r now
+</code></pre>
+
 <ol>
 <li>之后由于虚拟机使用的是centos，需要下载Xrdp，以及配置相关的文件，来使用远程桌面服务。</li>
 </ol>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># 以下内容来自 https://siskonemilia.github.io/Service-Computing/Service-Computing-01-Private-Cloud-Service/</span>
-<span class="c1"># 由于yum的包仓库没有Xrdp的包, 需要配置EPEL源，</span>
+
+<pre><code class="language-shell"># 以下内容来自 https://siskonemilia.github.io/Service-Computing/Service-Computing-01-Private-Cloud-Service/
+# 由于yum的包仓库没有Xrdp的包, 需要配置EPEL源，
 yum install -y epel-release-latest.noarch
-<span class="c1"># 安装Xrdp相关组件</span>
+# 安装Xrdp相关组件
 yum install xrdp tigervnc-server 
-<span class="c1"># 启动xrdp 服务，并设置开机启动，实际上是监听(listen)相应端口的rdp连接</span>
+# 启动xrdp 服务，并设置开机启动，实际上是监听(listen)相应端口的rdp连接
 systemctl start xrdp
-systemctl <span class="nb">enable</span> xrdp
-<span class="c1"># 使用netstat查看端口的使用情况, 验证是否开启成功, 默认是使用3389来监听</span>
-netstat -antup <span class="p">|</span> grep xrdp
-<span class="c1"># 调整防火墙设置</span>
-firewall-cmd --permanent --add-port<span class="o">=</span><span class="m">3389</span>/tcp
+systemctl enable xrdp
+# 使用netstat查看端口的使用情况, 验证是否开启成功, 默认是使用3389来监听
+netstat -antup | grep xrdp
+# 调整防火墙设置
+firewall-cmd --permanent --add-port=3389/tcp
 firewall-cmd --reload
-chcon --type<span class="o">=</span>bin_t /usr/sbin/xrdp
-chcon --type<span class="o">=</span>bin_t /usr/sbin/xrdp-sesman</code></pre></td></tr></table>
-</div>
-</div>
+chcon --type=bin_t /usr/sbin/xrdp
+chcon --type=bin_t /usr/sbin/xrdp-sesman
+</code></pre>
+
 <ol>
 <li>之后就可以使用windows自带的rdc(remote desktop connection)，连接远程桌面
 输入对应的虚拟机地址和端口号，以及用于登陆的用户名( centos 的用户)，即可完成连接
@@ -415,6 +407,7 @@ chcon --type<span class="o">=</span>bin_t /usr/sbin/xrdp-sesman</code></pre></td
 
     </div>
 
+    
     <div class="post-copyright">
   <p class="copyright-item">
     <span class="item-title">Author</span>
@@ -426,13 +419,24 @@ chcon --type<span class="o">=</span>bin_t /usr/sbin/xrdp-sesman</code></pre></td
   </p>
   
   
-</div><footer class="post-footer">
+</div>
+
+    
+    
+
+    <footer class="post-footer">
       <div class="post-tags">
+          
           <a href="/tags/service-computing/">Service-Computing</a>
+          
           <a href="/tags/private-cloud/">Private Cloud</a>
-          </div>
+          
+        </div>
+
+      
       <nav class="post-nav">
-        <a class="prev" href="/post/service_computing_2/">
+        
+          <a class="prev" href="/post/service_computing_2/">
             <i class="iconfont icon-left"></i>
             <span class="prev-text nav-default">Service-Computing-02</span>
             <span class="prev-text nav-mobile">Prev</span>
@@ -443,14 +447,16 @@ chcon --type<span class="o">=</span>bin_t /usr/sbin/xrdp-sesman</code></pre></td
   </article>
         </div>
         
+  
+
+  
 
       </div>
     </main>
 
     <footer id="footer" class="footer">
       <div class="social-links">
-      <a href="2682731305@qq.com" class="iconfont icon-email" title="email"></a>
-      <a href="https://github.com/Z1Wu" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
   <a href="http://z1wu.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
 </div>
 
@@ -484,10 +490,12 @@ chcon --type<span class="o">=</span>bin_t /usr/sbin/xrdp-sesman</code></pre></td
     </div>
   </div>
   
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.ece58db6.min.js"></script>
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
 
 
 
