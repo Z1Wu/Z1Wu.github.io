@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Z1Wu&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 04 Mar 2019 09:22:28 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 18 Mar 2019 13:09:01 +0800</lastBuildDate>
     
 	<atom:link href="http://z1wu.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>system_analysis_homework_2</title>
+      <link>http://z1wu.github.io/post/system_analysis_hw2/</link>
+      <pubDate>Mon, 18 Mar 2019 13:09:01 +0800</pubDate>
+      
+      <guid>http://z1wu.github.io/post/system_analysis_hw2/</guid>
+      <description>简答题 用简短的语言给出对分析、设计的理解。 分析： 分析强调对问题和需求的 调查研究 而非解决方案。主要着重于 客户的需求 以及 软件的可行性 进行针对性分</description>
+    </item>
     
     <item>
       <title>System_Analysis_hw1</title>
