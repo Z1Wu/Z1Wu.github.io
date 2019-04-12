@@ -10,6 +10,20 @@
   </url>
   
   <url>
+    <loc>http://z1wu.github.io/post/system_analysis_hw4/</loc>
+    <lastmod>2019-04-10T20:51:35+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://z1wu.github.io/post/system_analysis_hw3/</loc>
+    <lastmod>2019-04-10T13:28:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://z1wu.github.io/post/system_analysis_hw2/</loc>
     <lastmod>2019-03-18T13:09:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -94,7 +108,7 @@
   
   <url>
     <loc>http://z1wu.github.io/post/</loc>
-    <lastmod>2019-03-18T13:09:01+08:00</lastmod>
+    <lastmod>2019-04-10T20:51:35+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -107,15 +121,15 @@
   </url>
   
   <url>
-    <loc>http://z1wu.github.io/categories/service-computing/</loc>
-    <lastmod>2018-10-04T18:52:33+08:00</lastmod>
+    <loc>http://z1wu.github.io/tags/service-computing/</loc>
+    <lastmod>2018-12-20T12:58:43+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://z1wu.github.io/tags/service-computing/</loc>
-    <lastmod>2018-12-20T12:58:43+08:00</lastmod>
+    <loc>http://z1wu.github.io/categories/service-computing/</loc>
+    <lastmod>2018-10-04T18:52:33+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>

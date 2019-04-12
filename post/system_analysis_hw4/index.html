@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>System-Analysis-hw4 - Z1Wu&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="z1wu" />
+  <meta name="description" content="简答题 用例的概念 用例（英语：use case），或译使用案例、用况，是软件工程或系统工程中对系统如何反应外界请求的描述，是一种通过用户的使用场" />
+
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.48" />
+
+
+<link rel="canonical" href="http://z1wu.github.io/post/system_analysis_hw4/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="System-Analysis-hw4" />
+<meta property="og:description" content="简答题 用例的概念 用例（英语：use case），或译使用案例、用况，是软件工程或系统工程中对系统如何反应外界请求的描述，是一种通过用户的使用场" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://z1wu.github.io/post/system_analysis_hw4/" /><meta property="article:published_time" content="2019-04-10T20:51:35&#43;08:00"/>
+<meta property="article:modified_time" content="2019-04-10T20:51:35&#43;08:00"/>
+<meta itemprop="name" content="System-Analysis-hw4">
+<meta itemprop="description" content="简答题 用例的概念 用例（英语：use case），或译使用案例、用况，是软件工程或系统工程中对系统如何反应外界请求的描述，是一种通过用户的使用场">
+
+
+<meta itemprop="datePublished" content="2019-04-10T20:51:35&#43;08:00" />
+<meta itemprop="dateModified" content="2019-04-10T20:51:35&#43;08:00" />
+<meta itemprop="wordCount" content="2237">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="System-Analysis-hw4"/>
+<meta name="twitter:description" content="简答题 用例的概念 用例（英语：use case），或译使用案例、用况，是软件工程或系统工程中对系统如何反应外界请求的描述，是一种通过用户的使用场"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Z1Wu&#39;s blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Z1Wu&#39;s blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">System-Analysis-hw4</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-04-10 </span>
+        
+        <span class="more-meta"> 2237 words </span>
+        <span class="more-meta"> 5 mins read </span>
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#简答题">简答题</a>
+<ul>
+<li><a href="#用例的概念">用例的概念</a></li>
+<li><a href="#用例和场景的关系-什么是主场景或-happy-path">用例和场景的关系？什么是主场景或 happy path？</a></li>
+<li><a href="#用例有哪些形式">用例有哪些形式？</a></li>
+<li><a href="#对于复杂业务-为什么编制完整用例非常难">对于复杂业务，为什么编制完整用例非常难？</a></li>
+<li><a href="#什么是用例图">什么是用例图？</a></li>
+<li><a href="#用例图的基本符号与元素">用例图的基本符号与元素？</a>
+<ul>
+<li><a href="#基本符号">基本符号</a></li>
+<li><a href="#元素">元素</a></li>
+</ul></li>
+<li><a href="#用例图的画法与步骤">用例图的画法与步骤</a></li>
+<li><a href="#用例图给利益相关人与开发者的价值有哪些">用例图给利益相关人与开发者的价值有哪些？</a></li>
+</ul></li>
+<li><a href="#建模练习题-用例模型">建模练习题（用例模型）</a>
+<ul>
+<li><a href="#绘制用例图">绘制用例图</a></li>
+<li><a href="#回答下列问题">回答下列问题：</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      
+
+<h1 id="简答题">简答题</h1>
+
+<h2 id="用例的概念">用例的概念</h2>
+
+<blockquote>
+<p>用例（英语：use case），或译使用案例、用况，是软件工程或系统工程中对系统如何反应外界请求的描述，是一种通过用户的使用场景来获取需求的技术。 &ndash; baidu baike</p>
+
+<p>每个用例提供了一个或多个场景，该场景说明了系统是如何和最终用户或其它系统互動，也就是谁可以用系统做什么，从而获得一个明确的业务目标。编写用例时要避免使用技术术语，而应该用最终用户或者领域专家的语言。用例一般是由软件开发者和最终用户共同创作的。 &ndash;  wikipedia</p>
+</blockquote>
+
+<p>通俗地讲，用例是文本形式的情节描述， 用以说明某参与者使用系统以实现某些目标。</p>
+
+<h2 id="用例和场景的关系-什么是主场景或-happy-path">用例和场景的关系？什么是主场景或 happy path？</h2>
+
+<ul>
+<li><p>场景是什么： <strong>场景 (scenario)</strong> 是参与者和系统之间的一系列特定的活动和交互，也称为用例实例 (use case instance)。</p></li>
+
+<li><p>用例和场景的关系：用例 (use case)就是一组相关的成功和失败场景集合，用来描述参与者如何使用系统来实现其目标。</p></li>
+
+<li><p>主场景： 也叫做主成功场景<code>Main Success Scenario</code>或者 理想路径<code>happy path</code>，这是用例最基本的组成部分，它描述了满足涉众关注点的典型成功路径。要注意的是，它通常不包括任何条件或分支，这是为了保持连贯性，并且将所有的条件处理都延迟到扩展部分。这种具有争议的做法更易于理解和扩展。</p></li>
+</ul>
+
+<h2 id="用例有哪些形式">用例有哪些形式？</h2>
+
+<p>用例能够以不同形式化程度或格式进行编写, 主要有以下三种形式：</p>
+
+<ul>
+<li><p>摘要 <code>Brief</code> : 简洁的一段式概要，通常用于主成功场景。</p></li>
+
+<li><p>非正式形式 <code>Casual</code>：非正式的段落格式。用几个段落覆盖不同场景。</p></li>
+
+<li><p>详述 <code>Fully</code> ：详细编写所有步骤及各种变化，同时具有补充部分，如前置条件和成功保证。</p></li>
+</ul>
+
+<h2 id="对于复杂业务-为什么编制完整用例非常难">对于复杂业务，为什么编制完整用例非常难？</h2>
+
+<p>复杂业务要编写完整用例的困难之处，主要能从以以下几个方面进行分析：</p>
+
+<ul>
+<li><p>繁杂：复杂业务的场景较多，场景较为复杂。</p></li>
+
+<li><p>变化：在前期的考虑中，很难不遗漏一些业务条件和需求，且这些需求条件还可能发生变化。</p></li>
+</ul>
+
+<h2 id="什么是用例图">什么是用例图？</h2>
+
+<p>用例图是描述用例、参与者以及它们之间关系的图。</p>
+
+<p>用例图是从用户的角度来描述对信息系统的需求，分析产品的功能和行为。</p>
+
+<p>用例图定义和描述了系统的外部可见行为，是分析、设计直至组装测试的重要依据。</p>
+
+<h2 id="用例图的基本符号与元素">用例图的基本符号与元素？</h2>
+
+<h3 id="基本符号">基本符号</h3>
+
+<p><em>这里给出 <code>UMLET</code> 支持的基本符号</em></p>
+
+<p><img src="/images/system_analysis/hw4_usercase_diagram.png" alt="" /></p>
+
+<h3 id="元素">元素</h3>
+
+<ul>
+<li><p>系统（System）：图中的大方框，可以是小型软件组件，也可以是完整的应用程序，里面包含外部可见的功能。</p></li>
+
+<li><p>参与者（Actor）：系统的左侧外的人形图案，表示与系统或程序进行交互的用户、组织或外部系统。</p></li>
+
+<li><p>用例（Use Case）：系统内的椭圆，外部可用的系统功能，对系统提供的服务进行描述。</p></li>
+
+<li><p>关系（relation）：用例图中涉及到的关系包括关联、泛化、包含、扩展。</p>
+
+<ul>
+<li>关联（Association）：说明了参与者与用例之间的通信，任何一方都可以发送或接受信息，箭头指向的是消息的接收方。</li>
+<li>泛化（Inheritance）：继承关系。</li>
+<li>包含（Include）：包含关系用来把一个较复杂用例所表示的功能分解成较小的步骤，箭头指向分解出来的功能用例，旁边需要显式写出该关系为 &lt;&gt;</li>
+<li>扩展（Extend）：扩展关系是指当前用例功能的延伸，相当于给当前基础样例提供附加的功能。箭头指向原来的基础样例，旁边需要显式写出该关系为 &lt;&gt;</li>
+</ul></li>
+</ul>
+
+<h2 id="用例图的画法与步骤">用例图的画法与步骤</h2>
+
+<ol>
+<li><p>确定参与者，包括:</p>
+
+<ul>
+<li>主要参与者：谁将使用系统的主要功能、谁将需要系统的支持以完成工作等</li>
+<li>协作参与者：谁将提供对应的系统功能、谁将维护系统，保证系统处于工作状态等</li>
+<li>幕后参与者：谁会对系统产生的结果感兴趣</li>
+</ul></li>
+
+<li><p>识别使用系统的主要参与者（primary actors）/角色(roles)</p></li>
+
+<li><p>识别系统依赖的外部系统</p></li>
+
+<li><p>识别用例</p></li>
+
+<li><p>识别用户级别用例</p></li>
+
+<li><p>识别子功能级别的用例</p></li>
+
+<li><p>建立 Actor 和 Use Cases 之间的关联。</p></li>
+</ol>
+
+<h2 id="用例图给利益相关人与开发者的价值有哪些">用例图给利益相关人与开发者的价值有哪些？</h2>
+
+<p>针对利益相关者</p>
+
+<ol>
+<li>可以直观看到系统的结果和用户的功能体验，保证系统按照用户的需求进行设计。</li>
+<li>用例能够根据需要对复杂程度和形式化程序进行增减调节，即能够响应用户（利益相关人)提出的需求，而用例图则使得这种调节更加便利，可以通过修改图形间的关系实现。</li>
+</ol>
+
+<p>针对开发者</p>
+
+<ol>
+<li><p>用例图是设计者设计过程的结论与参考，设计者与开发者之间的交流工具，开发者开发过程的蓝图。</p></li>
+
+<li><p>用例图使得开发者能够更明确地获得需求，更好地理解需求。</p></li>
+
+<li><p>用例图可以指导开发和测试，同时可以在整个过程中对其他工作流起到指导作用。</p></li>
+</ol>
+
+<h1 id="建模练习题-用例模型">建模练习题（用例模型）</h1>
+
+<h2 id="绘制用例图">绘制用例图</h2>
+
+<p>选择2-3个你熟悉的类似业务的在线服务系统（或移动 APP），如定旅馆（携程、去哪儿等）、定电影票、背单词APP等，分别绘制它们用例图。并满足以下要求：</p>
+
+<blockquote>
+<p>请使用用户的视角，描述用户目标或系统提供的服务
+粒度达到子用例级别，并用 include 和 exclude 关联它们
+请用色彩标注出你认为创新（区别于竞争对手的）用例或子用例
+尽可能识别外部系统和服务</p>
+</blockquote>
+
+<p>选择一个简单的定电影票 APP 的大致用例图如下</p>
+
+<p><img src="/images/system_analysis/hw4_movie_ticket.png" alt="" /></p>
+
+<h2 id="回答下列问题">回答下列问题：</h2>
+
+<ol>
+<li><p>为什么相似系统的用例图是相似的？</p></li>
+
+<li><p>如何利用用例图定位创新思路（业务创新、或技术创新、或商业模式创新）在系统中的作用。</p></li>
+
+<li><p>请使用 SCRUM 方法，选择一个用例图，编制某定旅馆开发的需求（backlog）开发计划表</p></li>
+</ol>
+
+<p>选择 <code>Asg_RH</code> 的用例图进行如下的开发计划表展示:</p>
+
+<table>
+<thead>
+<tr>
+<th align="center">ID</th>
+<th align="center">NAME</th>
+<th align="center">IMPORTANCE</th>
+<th align="center">ESTIMATE</th>
+<th align="center">HOW TO DEMO</th>
+<th align="center">NOTES</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">1</td>
+<td align="center">查找酒店</td>
+<td align="center">90</td>
+<td align="center">3</td>
+<td align="center">根据输入的信息查找对应酒店</td>
+<td align="center">None</td>
+</tr>
+
+<tr>
+<td align="center">2</td>
+<td align="center">预定酒店</td>
+<td align="center">100</td>
+<td align="center">5</td>
+<td align="center">填写相关信息之后，进行预定</td>
+<td align="center">None</td>
+</tr>
+
+<tr>
+<td align="center">3</td>
+<td align="center">修改订单</td>
+<td align="center">70</td>
+<td align="center">2</td>
+<td align="center">修改已经填写的信息</td>
+<td align="center">None</td>
+</tr>
+
+<tr>
+<td align="center">4</td>
+<td align="center">支付订单</td>
+<td align="center">100</td>
+<td align="center">4</td>
+<td align="center">用户选择支付方式进行支付</td>
+<td align="center">可以使用外部 api 来简化实现</td>
+</tr>
+
+<tr>
+<td align="center">5</td>
+<td align="center">用户评价</td>
+<td align="center">70</td>
+<td align="center">2</td>
+<td align="center">已经支付后才能评价</td>
+<td align="center">可选功能</td>
+</tr>
+</tbody>
+</table>
+
+<ol>
+<li>项目用例点估算</li>
+</ol>
+
+<p>根据所给的资料，生成的表如下:</p>
+
+<table>
+<thead>
+<tr>
+<th align="center">用例</th>
+<th align="center">业务</th>
+<th align="center">计算</th>
+<th align="center">原因</th>
+<th align="center">UC 比重</th>
+<th align="center">原因</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">1</td>
+<td align="center">查找酒店</td>
+<td align="center">3</td>
+<td align="center">3</td>
+<td align="center">一般</td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="center">2</td>
+<td align="center">预定酒店</td>
+<td align="center">7</td>
+<td align="center">5</td>
+<td align="center">一般</td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="center">3</td>
+<td align="center">修改订单</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">简单</td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="center">4</td>
+<td align="center">支付订单</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">简单</td>
+<td align="center"></td>
+</tr>
+
+<tr>
+<td align="center">5</td>
+<td align="center">用户评价</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">简单</td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">z1wu</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">2019-04-10</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      
+
+      
+      <nav class="post-nav">
+        
+        
+          <a class="next" href="/post/system_analysis_hw3/">
+            <span class="next-text nav-default">System-Analysis-hw3</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+  <a href="http://z1wu.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2018 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">z1wu</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

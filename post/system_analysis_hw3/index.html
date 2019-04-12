@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>System-Analysis-hw3 - Z1Wu&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="z1wu" />
+  <meta name="description" content="简述瀑布模型、增量模型、螺旋模型（含原型方法）的优缺点 从项目特点、风险特征、人力资源利用角度思考 瀑布模型 瀑布模型（Waterfall Mode" />
+
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.48" />
+
+
+<link rel="canonical" href="http://z1wu.github.io/post/system_analysis_hw3/" />
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+<link href="/dist/even.min.css?v=3.2.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="System-Analysis-hw3" />
+<meta property="og:description" content="简述瀑布模型、增量模型、螺旋模型（含原型方法）的优缺点 从项目特点、风险特征、人力资源利用角度思考 瀑布模型 瀑布模型（Waterfall Mode" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://z1wu.github.io/post/system_analysis_hw3/" /><meta property="article:published_time" content="2019-04-10T13:28:00&#43;08:00"/>
+<meta property="article:modified_time" content="2019-04-10T13:28:00&#43;08:00"/>
+<meta itemprop="name" content="System-Analysis-hw3">
+<meta itemprop="description" content="简述瀑布模型、增量模型、螺旋模型（含原型方法）的优缺点 从项目特点、风险特征、人力资源利用角度思考 瀑布模型 瀑布模型（Waterfall Mode">
+
+
+<meta itemprop="datePublished" content="2019-04-10T13:28:00&#43;08:00" />
+<meta itemprop="dateModified" content="2019-04-10T13:28:00&#43;08:00" />
+<meta itemprop="wordCount" content="2160">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="System-Analysis-hw3"/>
+<meta name="twitter:description" content="简述瀑布模型、增量模型、螺旋模型（含原型方法）的优缺点 从项目特点、风险特征、人力资源利用角度思考 瀑布模型 瀑布模型（Waterfall Mode"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Z1Wu&#39;s blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Z1Wu&#39;s blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">System-Analysis-hw3</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-04-10 </span>
+        
+        <span class="more-meta"> 2160 words </span>
+        <span class="more-meta"> 5 mins read </span>
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#简述瀑布模型-增量模型-螺旋模型-含原型方法-的优缺点">简述瀑布模型、增量模型、螺旋模型（含原型方法）的优缺点</a>
+<ul>
+<li><a href="#瀑布模型">瀑布模型</a>
+<ul>
+<li><a href="#优点">优点</a></li>
+<li><a href="#缺点">缺点</a></li>
+</ul></li>
+<li><a href="#增量模型">增量模型</a>
+<ul>
+<li><a href="#优点-1">优点</a></li>
+<li><a href="#缺点-1">缺点</a></li>
+</ul></li>
+<li><a href="#螺旋模型">螺旋模型</a>
+<ul>
+<li><a href="#优点-2">优点</a></li>
+<li><a href="#缺点-2">缺点</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#简述统一过程三大特点-与面向对象的方法有什么关系">简述统一过程三大特点，与面向对象的方法有什么关系？</a>
+<ul>
+<li><a href="#特点一-用例和风险驱动">特点一 ：用例和风险驱动：</a></li>
+<li><a href="#特点二-以体系结构为核心">特点二 ：以体系结构为核心：</a></li>
+<li><a href="#特点三-迭代及增量">特点三 ：迭代及增量 ：</a></li>
+<li><a href="#和面向对象的关系">和面向对象的关系</a></li>
+</ul></li>
+<li><a href="#简述统一过程四个阶段的划分准则是什么-每个阶段关键的里程碑是什么">简述统一过程四个阶段的划分准则是什么？每个阶段关键的里程碑是什么？</a>
+<ul>
+<li><a href="#阶段一-初始阶段">阶段一：初始阶段</a>
+<ul>
+<li><a href="#划分准则">划分准则</a></li>
+<li><a href="#里程碑">里程碑</a></li>
+</ul></li>
+<li><a href="#阶段二-细化阶段">阶段二：细化阶段</a>
+<ul>
+<li><a href="#划分准则-1">划分准则</a></li>
+<li><a href="#里程碑-1">里程碑</a></li>
+</ul></li>
+<li><a href="#阶段三-构造阶段">阶段三：构造阶段</a>
+<ul>
+<li><a href="#划分准则-2">划分准则</a></li>
+<li><a href="#里程碑-2">里程碑</a></li>
+</ul></li>
+<li><a href="#阶段四-交付阶段">阶段四：交付阶段</a>
+<ul>
+<li><a href="#划分准则-3">划分准则</a></li>
+<li><a href="#里程碑-3">里程碑</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#软件企业为什么能按固定节奏生产-固定周期发布软件产品-它给企业项目管理带来哪些好处">软件企业为什么能按固定节奏生产、固定周期发布软件产品？它给企业项目管理带来哪些好处？</a></li>
+<li><a href="#参考">参考</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    
+
+    
+    <div class="post-content">
+      
+
+<h1 id="简述瀑布模型-增量模型-螺旋模型-含原型方法-的优缺点">简述瀑布模型、增量模型、螺旋模型（含原型方法）的优缺点</h1>
+
+<blockquote>
+<p>从项目特点、风险特征、人力资源利用角度思考</p>
+</blockquote>
+
+<h2 id="瀑布模型">瀑布模型</h2>
+
+<blockquote>
+<p>瀑布模型（Waterfall Model） 是一个项目开发架构，开发过程是通过设计一系列阶段顺序展开的，从系统需求分析开始直到产品发布和维护，每个阶段都会产生循环反馈，因此，如果有信息未被覆盖或者发现了问题，那么最好 “返回”上一个阶段并进行适当的修改，项目开发进程从一个阶段“流动”到下一个阶段，这也是瀑布模型名称的由来。包括软件工程开发、企业项目开发、产品生产以及市场销售等构造瀑布模型。</p>
+</blockquote>
+
+<h3 id="优点">优点</h3>
+
+<ul>
+<li><p>为项目提供了按阶段划分的检查点。</p></li>
+
+<li><p>当前一阶段完成后，只需要去关注后续阶段。</p></li>
+
+<li><p>可在迭代模型中应用瀑布模型。</p>
+
+<h3 id="缺点">缺点</h3></li>
+
+<li><p>各个阶段的划分完全固定，阶段之间产生大量的文档，极大地增加了工作量。</p></li>
+
+<li><p>由于开发模型是线性的，用户只有等到整个过程的末期才能见到开发成果，从而增加了开发风险。</p></li>
+
+<li><p>通过过多的强制完成日期和里程碑来跟踪各个项目阶段。</p></li>
+
+<li><p>瀑布模型的突出缺点是不适应用户需求的变化。</p></li>
+</ul>
+
+<h2 id="增量模型">增量模型</h2>
+
+<h3 id="优点-1">优点</h3>
+
+<ul>
+<li><p>人员分配灵活，刚开始不用投入大量人力资源。</p></li>
+
+<li><p>如果核心产品很受欢迎，则可增加人力实现下一个增量。</p></li>
+
+<li><p>可先发布部分功能给客户，对客户起到镇静剂的作用。</p></li>
+</ul>
+
+<h3 id="缺点-1">缺点</h3>
+
+<ul>
+<li><p>并行开发构件有可能遇到不能集成的风险，软件必须具备开放式的体系结构。</p></li>
+
+<li><p>增量模型的灵活性可以使其适应这种变化的能力大大优于瀑布模型和快速原型模型，但也很容易退化为边做边改模型，从而是软件过程的控制失去整体性</p></li>
+</ul>
+
+<h2 id="螺旋模型">螺旋模型</h2>
+
+<h3 id="优点-2">优点</h3>
+
+<ul>
+<li><p>设计上的灵活性,可以在项目的各个阶段进行变更。</p></li>
+
+<li><p>以小的分段来构建大型系统,使成本计算变得简单容易；</p></li>
+
+<li><p>客户始终参与每个阶段的开发,保证了项目不偏离正确方向以及项目的可控性；</p></li>
+
+<li><p>随着项目推进,客户始终掌握项目的最新信息 , 从而他或她能够和管理层有效地交互。</p></li>
+</ul>
+
+<h3 id="缺点-2">缺点</h3>
+
+<ul>
+<li><p>要求开发人员要擅长寻找可能的风险，准确地分析风险。</p></li>
+
+<li><p>强调风险分析，但要求许多客户接受和相信这种分析，并做出相关反应是不容易的。一般用于内部大规模软件开发。
+建设周期长。</p></li>
+</ul>
+
+<h1 id="简述统一过程三大特点-与面向对象的方法有什么关系">简述统一过程三大特点，与面向对象的方法有什么关系？</h1>
+
+<h2 id="特点一-用例和风险驱动">特点一 ：用例和风险驱动：</h2>
+
+<p>统一过程一般由 UML 方法和工具支持。用例是捕获需求的方法，因此，也可以说 统一过程 是用例（需求）驱动的。统一过程 的另一个驱动就是风险，因为如果你不主动预测和防范风险，风险就会主动攻击你。统一过程 需要对软件开发中的风险进行分析、预测并关注软件的构造。</p>
+
+<h2 id="特点二-以体系结构为核心">特点二 ：以体系结构为核心：</h2>
+
+<p>统一过程方法实际上就是开发和演进一个健壮的系统体系结构，体系结构描述了系统的整体框架：如何把系统划分成组件以及这些组件如何进行交互和部署在硬件上。组件使重用成为可能，系统可以由组件组成。基于独立的、可替换的、模块化组件的体系结构有助于管理复杂性，提高重用率。<code>RUP</code> 描述了如何设计一个有弹性的、能适应变化的、易于理解的、有助于重用的软件体系结构。</p>
+
+<h2 id="特点三-迭代及增量">特点三 ：迭代及增量 ：</h2>
+
+<p>统一过程迭代表示我们把项目分成小的子项目（迭代），它提供系统的功能块或者增量，最终产生完整的功能系统。每一次迭代都经历一次完整的软件生命周期，每一次迭代都有需求、分析、设计、实施，并以一个可执行版本结束。执行迭代计划的关键是准确获知每个迭代要完成的目标，如果采用 <code>UML</code> 建模，则用例就是最好的迭代点。可以为用例排出优先级，在每个迭代中实现一部分用例。</p>
+
+<h2 id="和面向对象的关系">和面向对象的关系</h2>
+
+<p>中的核心工作流的实现阶段中可以用面向对象的方法实现组件。</p>
+
+<h1 id="简述统一过程四个阶段的划分准则是什么-每个阶段关键的里程碑是什么">简述统一过程四个阶段的划分准则是什么？每个阶段关键的里程碑是什么？</h1>
+
+<h2 id="阶段一-初始阶段">阶段一：初始阶段</h2>
+
+<h3 id="划分准则">划分准则</h3>
+
+<h3 id="里程碑">里程碑</h3>
+
+<h2 id="阶段二-细化阶段">阶段二：细化阶段</h2>
+
+<h3 id="划分准则-1">划分准则</h3>
+
+<p>细化阶段的目标是分析问题领域，建立健全的体系结构基础，编制项目计划，淘汰项目中最高风险的元素。为了达到该目的，必须在理解整个系统的基础上，对体系结构作出决策，包括其范围、主要功能和诸如性能等非功能需求。同时为项目建立支持环境，包括创建开发案例，创建模板、准则并准备工具。</p>
+
+<h3 id="里程碑-1">里程碑</h3>
+
+<p>生命周期的结构里程碑，为系统的结构建立了管理基准并使项目小组能够在构建阶段中进行衡量。检验详细的系统目标和范围、结构的选择以及主要风险的解决方案。</p>
+
+<h2 id="阶段三-构造阶段">阶段三：构造阶段</h2>
+
+<h3 id="划分准则-2">划分准则</h3>
+
+<p>在构建阶段，所有剩余的构件和应用程序功能被开发并集成为产品，所有的功能被详细测试。从某种意义上说，构建阶段是一个制造过程，其重点放在管理资源及控制运作以优化成本、进度和质量。</p>
+
+<h3 id="里程碑-2">里程碑</h3>
+
+<p>初始功能里程碑，决定了产品是否可以在测试环境中进行部署。此刻，要确定软件、环境、用户是否可以开始系统的运作。此时的产品版本也常被称为“beta”版。</p>
+
+<h2 id="阶段四-交付阶段">阶段四：交付阶段</h2>
+
+<h3 id="划分准则-3">划分准则</h3>
+
+<p>交付阶段的重点是确保软件对最终用户是可用的。交付阶段可以跨越几次迭代，包括为发布做准备的产品测试，基于用户反馈的少量的调整。在生命周期的这一点上，用户反馈应主要集中在产品调整，设置、安装和可用性问题，所有主要的结构问题应该已经在项目生命周期的早期阶段解决了。</p>
+
+<h3 id="里程碑-3">里程碑</h3>
+
+<p>产品发布里程碑。此时，决定是否目标已达到或开始另一个周期。在许多情况下，里程碑会与下一个周期的初始阶段相重叠。</p>
+
+<h1 id="软件企业为什么能按固定节奏生产-固定周期发布软件产品-它给企业项目管理带来哪些好处">软件企业为什么能按固定节奏生产、固定周期发布软件产品？它给企业项目管理带来哪些好处？</h1>
+
+<p>因为使用了 统一过程 <code>(UP)</code>，把过程细分为四个阶段，从而每个阶段都有科学的划分依据，以及特定的里程碑，按照这个过程进行的软件开发，渐进的方式进行演进，解决高风险的问题，以迭代的方式进行产品的发布。</p>
+
+<h1 id="参考">参考</h1>
+
+    </div>
+
+    
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">z1wu</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">2019-04-10</span>
+  </p>
+  
+  
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/post/system_analysis_hw4/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">System-Analysis-hw4</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/post/system_analysis_hw2/">
+            <span class="next-text nav-default">System-Analysis-hw2</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+  <a href="http://z1wu.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2018 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">z1wu</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script><script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+<script type="text/javascript" src="/dist/even.min.js?v=3.2.0"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
