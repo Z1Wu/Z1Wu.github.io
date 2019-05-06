@@ -22,6 +22,24 @@
     
     <item>
       <title>System-Analysis-hw6</title>
+      <link>http://z1wu.github.io/post/swsad/hw6/</link>
+      <pubDate>Mon, 06 May 2019 10:55:08 +0800</pubDate>
+      
+      <guid>http://z1wu.github.io/post/swsad/hw6/</guid>
+      <description>题目1 使用类图，分别对 Asg_RH 文档中 Make Reservation 用例以及 Payment 用例开展领域建模。然后，根据上述模型，给出建议的数据表以及主要字段，特别是主键和外键 注意事项： 对</description>
+    </item>
+    
+    <item>
+      <title>System-Analysis-hw5</title>
+      <link>http://z1wu.github.io/post/swsad/hw5/</link>
+      <pubDate>Mon, 06 May 2019 10:34:19 +0800</pubDate>
+      
+      <guid>http://z1wu.github.io/post/swsad/hw5/</guid>
+      <description>使用 UMLet 建模 题目 1 根据订旅馆建模文档，Asg-RH.pdf 绘制用例图模型（到子用例） 用例图模型 make reservation 的活动图 题目 2 根据课程练习“投递员使用投递箱</description>
+    </item>
+    
+    <item>
+      <title>System-Analysis-hw6</title>
       <link>http://z1wu.github.io/post/system_analysis_hw6/</link>
       <pubDate>Wed, 10 Apr 2019 20:51:35 +0800</pubDate>
       

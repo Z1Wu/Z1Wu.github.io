@@ -10,6 +10,20 @@
   </url>
   
   <url>
+    <loc>http://z1wu.github.io/post/swsad/hw6/</loc>
+    <lastmod>2019-05-06T10:55:08+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://z1wu.github.io/post/swsad/hw5/</loc>
+    <lastmod>2019-05-06T10:34:19+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://z1wu.github.io/post/system_analysis_hw6/</loc>
     <lastmod>2019-04-10T20:51:35+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -108,7 +122,7 @@
   
   <url>
     <loc>http://z1wu.github.io/post/</loc>
-    <lastmod>2019-04-10T20:51:35+08:00</lastmod>
+    <lastmod>2019-05-06T10:55:08+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
